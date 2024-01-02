@@ -29,7 +29,7 @@ const Dropzone = () => {
                   const formData = new FormData();
                   formData.append('file', selectedFileUrl);
                   try {
-                        const urlAPI = 'https://calm-teal-seagull-slip.cyclic.app/upload/arquivo';
+                        const urlAPI = 'https://zany-blue-cod-cape.cyclic.app/upload/arquivo';
                         const response = await axios.post(urlAPI, formData);
 
                         // Handle a resposta da API, se necessário
@@ -51,7 +51,7 @@ const Dropzone = () => {
                   // const apiKey = 'kEDXY16aK48wUPRRuNFcPBHz';
 
                   console.log("filename=", fileName);
-                  const urlAPIGet = "https://calm-teal-seagull-slip.cyclic.app/upload/create-url/" + fileName;
+                  const urlAPIGet = "https://zany-blue-cod-cape.cyclic.app/upload/create-url/" + fileName;
                   const resp = await axios.get(urlAPIGet);
                   const signedUrl = resp.data.data.signedUrl;
                   console.log("signedUrl", signedUrl);
@@ -61,11 +61,11 @@ const Dropzone = () => {
                   // const formData = new FormData();
                   // formData.append('file', signedUrl);
 
-                  const urlAPI = "https://calm-teal-seagull-slip.cyclic.app/upload/remover-fundo/bg" + fileName;
+                  const urlAPI = "https://zany-blue-cod-cape.cyclic.app/upload/remover-fundo/bg" + fileName;
                   const response = await axios.post(urlAPI);
                   console.log(response);
 
-                  const urlBgImage = "https://calm-teal-seagull-slip.cyclic.app/upload/create-url/" + response.data.data.path;
+                  const urlBgImage = "https://zany-blue-cod-cape.cyclic.app/upload/create-url/" + response.data.data.path;
                   const resposta = await axios.get(urlBgImage);
 
                   // Abre uma nova guia com a imagem removida do fundo
