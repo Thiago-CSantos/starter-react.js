@@ -61,12 +61,13 @@ const Dropzone = () => {
                   // const formData = new FormData();
                   // formData.append('file', signedUrl);
 
-                  const urlAPI = "https://real-pink-indri-boot.cyclic.app/upload/remover-fundo/bg" + fileName;
+                  const urlAPI = "https://real-pink-indri-boot.cyclic.app/upload/remover-fundo/" + fileName;
                   const response = await axios.post(urlAPI);
                   console.log(response);
 
                   const urlBgImage = "https://real-pink-indri-boot.cyclic.app/upload/create-url/" + response.data.data.path;
                   const resposta = await axios.get(urlBgImage);
+                  console.log(resposta);
 
                   // Abre uma nova guia com a imagem removida do fundo
                   window.open(resposta.data.data.signedUrl, '_blank');
