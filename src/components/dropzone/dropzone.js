@@ -29,7 +29,7 @@ const Dropzone = () => {
                   const formData = new FormData();
                   formData.append('file', selectedFileUrl);
                   try {
-                        const urlAPI = 'https://scarlet-octopus-hem.cyclic.app/upload/arquivo';
+                        const urlAPI = 'http://localhost:3000//upload/arquivo';
                         const response = await axios.post(urlAPI, formData);
 
                         // Handle a resposta da API, se necessário
@@ -51,7 +51,7 @@ const Dropzone = () => {
                   // const apiKey = 'kEDXY16aK48wUPRRuNFcPBHz';
 
                   console.log("filename=", fileName);
-                  const urlAPIGet = "https://scarlet-octopus-hem.cyclic.app/upload/create-url/" + fileName;
+                  const urlAPIGet = "http://localhost:3000//upload/create-url/" + fileName;
                   const resp = await axios.get(urlAPIGet);
                   const signedUrl = resp.data.data.signedUrl;
                   console.log("signedUrl", signedUrl);
@@ -61,11 +61,11 @@ const Dropzone = () => {
                   // const formData = new FormData();
                   // formData.append('file', signedUrl);
 
-                  const urlAPI = "https://scarlet-octopus-hem.cyclic.app/upload/remover-fundo/bg" + fileName;
+                  const urlAPI = "http://localhost:3000//upload/remover-fundo/bg" + fileName;
                   const response = await axios.post(urlAPI);
                   console.log(response);
 
-                  const urlBgImage = "https://scarlet-octopus-hem.cyclic.app/upload/create-url/" + response.data.data.path;
+                  const urlBgImage = "http://localhost:3000//upload/create-url/" + response.data.data.path;
                   const resposta = await axios.get(urlBgImage);
 
                   // Abre uma nova guia com a imagem removida do fundo
