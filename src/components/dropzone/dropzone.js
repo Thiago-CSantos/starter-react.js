@@ -67,7 +67,7 @@ const Dropzone = () => {
 
                   const urlBgImage = "https://real-pink-indri-boot.cyclic.app/upload/create-url/bg" + fileName;
                   const resposta = await axios.get(urlBgImage);
-                  console.log("resposta", resposta);
+                  console.log("resposta", resposta.data.data.signedUrl);
 
                   // Abre uma nova guia com a imagem removida do fundo
                   window.open(resposta.data.data.signedUrl, '_blank');
