@@ -98,7 +98,7 @@ const Dropzone = () => {
 
                   <button className='btn-bg' onClick={handleRemoveBackground}>Remover background</button>
 
-                  <img src={imgBg} />
+                  <img src={imgBg} alt='imagem com fundo removido' />
 
             </>
       )
