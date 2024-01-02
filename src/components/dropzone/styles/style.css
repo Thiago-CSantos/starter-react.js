@@ -1,0 +1,67 @@
+.dropzone {
+      height: 300px;
+      background-color: #7c09da;
+      border: 10px;
+      border-radius: 10px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 48px;
+      outline: 0;
+      cursor: pointer;
+}
+
+.dropzone img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+}
+
+.dropzone p {
+      width: calc(100% - 20px);
+      height: calc(100% - 20px);
+      border-radius: 10px;
+      border: 2px dashed #ffffff;
+      color: #fff;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+}
+
+button {
+      margin: 30px 0 5px 0;
+      padding: 5px 60px;
+      background-color:  #007bff;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+
+      transition: background-color 0.3s;
+}
+
+button:hover {
+      background-color:  #007bff62;
+}
+
+.btn-bg{
+      margin: 10px 0 50px 0;
+      padding: 5px 60px;
+      background-color:  #7700ff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+
+      transition: background-color 0.3s;
+}
+
+.btn-bg:hover {
+      background-color:  #007bff62;
+}
+
+.btn-bg::selection{
+      background-color: aqua;
+}
