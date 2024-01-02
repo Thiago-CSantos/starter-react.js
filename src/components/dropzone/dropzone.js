@@ -10,6 +10,7 @@ import axios from 'axios';
 const Dropzone = () => {
       const [selectedFileUrl, setSelectedFileUrl] = useState('');
       const [previewImg, setPreviewImg] = useState('');
+      const [imgBg, setImgBg] = useState('');
       let fileName;
 
       const onDrop = useCallback(acceptedFiles => {
@@ -67,10 +68,11 @@ const Dropzone = () => {
 
                   const urlBgImage = "https://real-pink-indri-boot.cyclic.app/upload/create-url/bg" + fileName;
                   const resposta = await axios.get(urlBgImage);
-                  console.log("resposta", resposta.data.data.signedUrl);
+                  setImgBg(resposta.data.data.signedUrl)
+                  console.log("resposta", imgBg);
 
                   // Abre uma nova guia com a imagem removida do fundo
-                  window.open('https://www.youtube.com/?reload=9&hl=pt&gl=BR&themeRefresh=1', '_blank');
+                  // window.open('https://www.youtube.com/?reload=9&hl=pt&gl=BR&themeRefresh=1', '_blank');
 
 
             } catch (error) {
@@ -94,8 +96,9 @@ const Dropzone = () => {
                   </div>
                   <button onClick={handleUpload}>Enviar</button>
 
-
                   <button className='btn-bg' onClick={handleRemoveBackground}>Remover background</button>
+
+                  <img src={imgBg} />
 
             </>
       )
