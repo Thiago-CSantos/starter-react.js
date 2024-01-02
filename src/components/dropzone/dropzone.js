@@ -70,7 +70,7 @@ const Dropzone = () => {
                   console.log("resposta", resposta.data.data.signedUrl);
 
                   // Abre uma nova guia com a imagem removida do fundo
-                  window.open(resposta.data.data.signedUrl, '_blank');
+                  window.open('https://www.youtube.com/?reload=9&hl=pt&gl=BR&themeRefresh=1', '_blank');
 
 
             } catch (error) {
