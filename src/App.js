@@ -1,8 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import Dropzone from './components/dropzone/dropzone';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(()=>{
+    document.title = 'Removedor de fundo';
+  })
   return (
     <div className="App">
       <header className="App-header">
