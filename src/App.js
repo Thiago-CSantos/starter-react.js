@@ -6,12 +6,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <Dropzone></Dropzone>
+        <Dropzone></Dropzone>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Repositório <code>src/App.js</code> and save to reload.
+          Repositório <code>https://github.com/Thiago-CSantos/starter-react.js</code>.
         </p>
-        
+
       </header>
     </div>
   );
