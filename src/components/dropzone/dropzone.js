@@ -29,7 +29,7 @@ const Dropzone = () => {
                   const formData = new FormData();
                   formData.append('file', selectedFileUrl);
                   try {
-                        const urlAPI = 'https://zany-blue-cod-cape.cyclic.app/upload/arquivo';
+                        const urlAPI = 'https://scarlet-octopus-hem.cyclic.app/upload/arquivo';
                         const response = await axios.post(urlAPI, formData);
 
                         // Handle a resposta da API, se necessário
