@@ -65,7 +65,7 @@ const Dropzone = () => {
                   const response = await axios.post(urlAPI);
                   console.log(response);
 
-                  const urlBgImage = "http://localhost:3000/upload/create-url/bg.jpeg";
+                  const urlBgImage = "http://localhost:3000/upload/create-url/" + response.data.data.path;
                   const resposta = await axios.get(urlBgImage);
 
                   // Abre uma nova guia com a imagem removida do fundo
