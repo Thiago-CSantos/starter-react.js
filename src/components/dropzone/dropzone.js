@@ -65,7 +65,7 @@ const Dropzone = () => {
                   const response = await axios.post(urlAPI);
                   console.log(response);
 
-                  const urlBgImage = "https://real-pink-indri-boot.cyclic.app/upload/create-url/" + fileName;
+                  const urlBgImage = "https://real-pink-indri-boot.cyclic.app/upload/create-url/bg" + fileName;
                   const resposta = await axios.get(urlBgImage);
                   console.log("resposta", resposta);
 
