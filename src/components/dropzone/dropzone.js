@@ -10,7 +10,6 @@ import axios from 'axios';
 const Dropzone = () => {
       const [selectedFileUrl, setSelectedFileUrl] = useState('');
       const [previewImg, setPreviewImg] = useState('');
-      const [clickButton, setClickButton] = useState(true)
       let fileName;
 
       const onDrop = useCallback(acceptedFiles => {
@@ -37,13 +36,11 @@ const Dropzone = () => {
                         console.log('Resposta da API:', response.data);
                         fileName = response.data.supabase.data.path
                         console.log('nome do arquivo', fileName);
-                        setClickButton(false);
                   } catch (error) {
                         // Handle erros de requisição, se necessário
                         console.error('Erro ao enviar arquivo:', error);
                   }
             }
-            
       };
 
       const handleRemoveBackground = async () => {
@@ -96,9 +93,8 @@ const Dropzone = () => {
                   </div>
                   <button onClick={handleUpload}>Enviar</button>
 
-                  {!clickButton
-                        ? <button className='btn-bg' onClick={handleRemoveBackground}>Remover background</button>
-                        : <p>envie a imagem</p>}
+
+                  <button className='btn-bg' onClick={handleRemoveBackground}>Remover background</button>
 
             </>
       )
