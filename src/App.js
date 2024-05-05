@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import Logo from './assets/folder.svg';
 import './App.css';
 import Dropzone from './components/dropzone/dropzone';
 import { useEffect } from 'react';
@@ -11,11 +11,11 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Dropzone></Dropzone>
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={Logo} className="App-logo" alt="logo" />
         <p>
           Repositório <code>https://github.com/Thiago-CSantos/starter-react.js</code>.
         </p>
-
+        
       </header>
     </div>
   );
