@@ -123,9 +123,6 @@ const Dropzone = () => {
                   )}
 
                   <img src={imgBg} alt='imagem com fundo removido' />
-                  {imgBg
-                        ? <a href={imgBg} download target='_blank' rel="noreferrer">Sssss</a>
-                        : <p>...</p>}
 
 
 
